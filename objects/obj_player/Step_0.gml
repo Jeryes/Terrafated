@@ -1,18 +1,12 @@
 /// @description Insert description here
-// You can write your code in this editor
-if keyboard_check(ord("W"))
-{
-	y = y - 2;
+
+// Calculate movement
+vx = (moveRight * walkSpeed);
+// If Idle
+if (vx == 0) {
+// do nothing for now
 }
-else if keyboard_check(ord("S"))
-{
-	y = y + 2;
-}
-else if keyboard_check(ord("A"))
-{
-	x = x - 2;
-}
-else if keyboard_check(ord("D"))
-{
-	x = x + 2;
+// If moving
+if (vx != 0) {
+x += vx;
 }
