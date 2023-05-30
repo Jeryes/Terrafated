@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Default player values
 // You can write your code in this editor
 
 // Variables
