@@ -1,0 +1,15 @@
+# GameMaker
+*.yyp		text
+*.yy		text
+*.gml		text
+
+# Audio
+*.wav		binary
+
+# Images
+*.png		-text
+*.fsh		text
+*.vsh		text
+
+*		text=auto
+*		-text
