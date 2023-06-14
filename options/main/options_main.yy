@@ -1,20 +1,3 @@
-{
-  "resourceType": "GMMainOptions",
-  "resourceVersion": "1.4",
-  "name": "Main",
-  "option_author": "",
-  "option_collision_compatibility": false,
-  "option_copy_on_write_enabled": false,
-  "option_draw_colour": 4294967295,
-  "option_game_speed": 60,
-  "option_gameguid": "f3fc901c-b00a-4721-aeb3-a73a6f8fb873",
-  "option_gameid": "0",
-  "option_mips_for_3d_textures": false,
-  "option_sci_usesci": true,
-  "option_spine_licence": false,
-  "option_steam_app_id": "0",
-  "option_template_description": null,
-  "option_template_icon": "${base_options_dir}/main/template_icon.png",
-  "option_template_image": "${base_options_dir}/main/template_image.png",
-  "option_window_colour": 255,
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a871f36d56300b4a59bf963007e58ca586838545a59e0984ff994b632f6372fd
+size 706

@@ -1,15 +1,12 @@
 # GameMaker
-*.yyp		text
-*.yy		text
+*.yyp filter=lfs diff=lfs merge=lfs -text
+*.yy filter=lfs diff=lfs merge=lfs -text
 *.gml		text
-
 # Audio
-*.wav		binary
-
+*.wav filter=lfs diff=lfs merge=lfs -text
 # Images
-*.png		-text
+*.png filter=lfs diff=lfs merge=lfs -text
 *.fsh		text
 *.vsh		text
-
 *		text=auto
 *		-text
