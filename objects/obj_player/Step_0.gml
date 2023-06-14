@@ -44,3 +44,6 @@ if (vx != 0 || vy != 0) {
 		dir = 1;
 	}
 }
+
+// Depth sorting
+depth =-y;
