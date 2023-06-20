@@ -1,5 +1,4 @@
 /// @description Default player values
-// You can write your code in this editor
 
 // Variables
 walkSpeed = 16;
@@ -10,3 +9,5 @@ moveRight = 0;
 moveLeft = 0;
 moveUp = 0;
 moveDown = 0;
+nearbyNPC = noone;
+lookRange = 50;
