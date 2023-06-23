@@ -18,6 +18,7 @@
     {"name":"Town","order":17,"path":"folders/Sprites/Town.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"User Interface","order":23,"path":"folders/Sprites/User Interface.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"snd_gameOver","order":2,"path":"sounds/snd_gameOver/snd_gameOver.yy",},
@@ -42,6 +43,7 @@
     {"name":"obj_npc_baker","order":11,"path":"objects/obj_npc_baker/obj_npc_baker.yy",},
     {"name":"spr_store01","order":6,"path":"sprites/spr_store01/spr_store01.yy",},
     {"name":"spr_grass01","order":4,"path":"sprites/spr_grass01/spr_grass01.yy",},
+    {"name":"spr_gui_textbox","order":1,"path":"sprites/spr_gui_textbox/spr_gui_textbox.yy",},
     {"name":"obj_store01","order":7,"path":"objects/obj_store01/obj_store01.yy",},
     {"name":"obj_rock01","order":6,"path":"objects/obj_rock01/obj_rock01.yy",},
     {"name":"spr_fountain_strip05","order":3,"path":"sprites/spr_fountain_strip05/spr_fountain_strip05.yy",},
@@ -50,6 +52,7 @@
     {"name":"snd_seq_bad03_BGM","order":10,"path":"sounds/snd_seq_bad03_BGM/snd_seq_bad03_BGM.yy",},
     {"name":"spr_teacher_idle_down","order":2,"path":"sprites/spr_teacher_idle_down/spr_teacher_idle_down.yy",},
     {"name":"snd_seq_bad02_BGM","order":9,"path":"sounds/snd_seq_bad02_BGM/snd_seq_bad02_BGM.yy",},
+    {"name":"obj_textbox","order":15,"path":"objects/obj_textbox/obj_textbox.yy",},
     {"name":"obj_barrel01","order":1,"path":"objects/obj_barrel01/obj_barrel01.yy",},
     {"name":"snd_seq_good03_BGM","order":13,"path":"sounds/snd_seq_good03_BGM/snd_seq_good03_BGM.yy",},
     {"name":"obj_fence01","order":5,"path":"objects/obj_fence01/obj_fence01.yy",},
