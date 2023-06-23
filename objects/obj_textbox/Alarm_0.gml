@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Destroying textbox
 
 // Destroy me
 global.playerControl = true;
