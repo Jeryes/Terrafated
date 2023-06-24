@@ -21,12 +21,16 @@ vy = ((moveDown - moveUp) * walkSpeed);
 
 // If Idle
 if (vx == 0 && vy == 0) {
-	// Change idle Sprite based on last direction
-	switch dir {
-		case 0: sprite_index = spr_player_idle_right; break;
-		case 1: sprite_index = spr_player_idle_up; break;
-		case 2: sprite_index = spr_player_idle_left; break;
-		case 3: sprite_index = spr_player_idle_down; break;
+	// If I'm not picking up or putting down an item
+	if (myState != playerState.pickingUp && myState != playerState.puttingDown) {
+		// If we don't have an item
+		if (hasItem == noone) {
+			myState = playerState.idle;
+		}
+		// If we're carrying an item
+		else {
+			myState = playerState.carryIdle;
+		}
 	}
 }
 
@@ -40,22 +44,28 @@ if (vx != 0 || vy != 0) {
 	}
 
 
-	// Change walking Sprite based on direction
+	// Change direction based on movement
 	if (vx > 0) {
-		sprite_index = spr_player_walk_right;
 		dir = 0;
 	}
 	if (vx < 0) {
-		sprite_index = spr_player_walk_left;
 		dir = 2;
 	}
 	if (vy > 0) {
-		sprite_index = spr_player_walk_down;
 		dir = 3;
 	}
 	if (vy < 0) {
-		sprite_index = spr_player_walk_up;
 		dir = 1;
+	}
+	
+	// Set state
+	// If we don't have an item
+	if (hasItem == noone) {
+		myState = playerState.walking;
+	}
+	// If we're carrying an item
+	else {
+		myState = playerState.carrying;
 	}
 	
 	// Move audio listener with me
@@ -87,6 +97,31 @@ if !nearbyNPC {
 	scr_dismissPrompt(npcPrompt,0);
 	show_debug_message("obj_player hasn't found anything");
 }
+
+// Check for collision with Items
+nearbyItem = collision_rectangle(x-lookRange,y-lookRange,x+lookRange,y+lookRange,obj_par_item,false,false);
+if (nearbyItem && !nearbyNPC) {
+	// Pop up prompt
+	if (itemPrompt == noone || itemPrompt == undefined) {
+		show_debug_message("obj_player has found an item!");
+		itemPrompt = scr_showPrompt(nearbyItem,nearbyItem.x,nearbyItem.y-300);
+	}
+}
+if (!nearbyItem || nearbyNPC) {
+	// Get rid of prompt
+	scr_dismissPrompt(itemPrompt,1);
+}
+
+// If picking up an item
+if (myState == playerState.pickingUp) {
+	if (image_index >= image_number-1) {
+		myState = playerState.carrying;
+		global.playerControl = true;
+	}
+}
+
+// Auto-choose Sprite based on state and direction
+sprite_index = playerSpr[myState][dir];
 
 // Depth sorting
 depth =-y;
