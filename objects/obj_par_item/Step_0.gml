@@ -14,4 +14,9 @@ switch myState {
 		y = _result[1];
 		depth = _result[2];
 	}; break;
+	// IF item is being put back
+	case itemState.puttingBack: {
+		y = putDownY;
+		myState = itemState.idle;
+	}; break;
 }
