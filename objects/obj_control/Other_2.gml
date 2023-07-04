@@ -1,7 +1,11 @@
-/// @description Insert description here
+/// @description Game States
 
 // Game variables
 global.playerControl = true;
+global.gameOver = false;
+global.gameStart = false;
+townBGMvolume = audio_sound_get_gain(snd_townBGM);
+townAmbienceVolume = audio_sound_get_gain(snd_townAmbience);
 
 // Player states
 enum playerState {
@@ -19,4 +23,25 @@ enum itemState {
 	taken,
 	used,
 	puttingBack,
+}
+
+// Sequence states
+enum seqState {
+	notPlaying,
+	waiting,
+	playing,
+	finished,
+}
+
+// Sequence variables
+sequenceState = seqState.notPlaying;
+curSeqLayer = noone;
+curSeq = noone;
+
+// Mark Sequences layer
+if (layer_exists("Cutscenes")) {
+	curSeqLayer = "Cutscenes";
+}
+else {
+	curSeqLayer = "Instances";
 }
