@@ -8,6 +8,7 @@ global.playerControl = false;
 fadeMe = 0;
 fadeSpeed = 0.1;
 image_alpha = 0;
+sequenceToShow = noone;
 
 // Dismiss any visible prompts
 scr_dismissPrompt(obj_prompt,0);
