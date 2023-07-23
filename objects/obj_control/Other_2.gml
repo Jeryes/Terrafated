@@ -33,6 +33,12 @@ enum seqState {
 	finished,
 }
 
+// NPC states
+enum npcState {
+	normal,
+	done,
+}
+
 // Sequence variables
 sequenceState = seqState.notPlaying;
 curSeqLayer = noone;
