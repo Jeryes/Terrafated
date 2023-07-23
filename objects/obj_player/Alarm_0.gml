@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Running dust VFX
 
 // Create dust cloud
 var _dustX, _dustY;

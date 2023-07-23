@@ -14,6 +14,6 @@ switch (event_data[? "message"]) {
 	case "sequenceEnd": {
 		// Set our state
 		sequenceState = seqState.finished;
-		show_debug_message("obj_control has heard that Sequence " + string(curSeq )+ " has ended");
+		show_debug_message("obj_control has heard that Sequence " + string(curSeq)+ " has ended");
 	}; break;
 }
